@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import {Task} from '../../Task';
+import {Task} from '../../../models/Task';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
