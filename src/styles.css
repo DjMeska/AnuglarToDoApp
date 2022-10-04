@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
+:root {
+  --a: #C4B1AE;
+  --b: #B4ADA3;
+  --c: #BFB59E;
+  --d: #CAB7A2;
+  --e: #858786;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +16,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--a);
 }
 
 .container {
@@ -15,7 +24,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 1px solid var(--b);
   padding: 30px;
   border-radius: 5px;
 }
@@ -74,3 +83,4 @@ body {
   flex: 2;
   height: 20px;
 }
+

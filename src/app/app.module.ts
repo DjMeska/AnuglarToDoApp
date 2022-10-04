@@ -6,14 +6,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/ToDoComponents/header/header.component';
-import { ButtonComponent } from './components/ToDoComponents/button/button.component';
+import { ButtonComponent } from './components/Common/button/button.component';
 import { TasksComponent } from './components/ToDoComponents/tasks/tasks.component';
 import { TasksItemComponent } from './components/ToDoComponents/tasks-item/tasks-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/ToDoComponents/add-task/add-task.component';
+import { NavBarComponent } from './components/Common/NavBar/nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
-  {path: '', component: TasksComponent}
+  {path: 'todo', component: TasksComponent},
+  {path: 'todo', component: TasksComponent}
 ]
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     ButtonComponent,
     TasksComponent,
     TasksItemComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

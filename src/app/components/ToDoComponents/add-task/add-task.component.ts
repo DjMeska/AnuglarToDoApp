@@ -8,8 +8,8 @@ import { Subscription } from 'rxjs';
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddTaskComponent implements OnInit {
-  @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
+export class AddTaskComponent {
+  @Output() OnAddTask: EventEmitter<Task> = new EventEmitter();
   text: string = "";
   day: string = "";
   reminder: boolean = false;
@@ -18,9 +18,6 @@ export class AddTaskComponent implements OnInit {
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe(value => this.showAddTask = value)
-  }
-
-  ngOnInit(): void {
   }
 
   onSubmit(){
@@ -34,7 +31,7 @@ export class AddTaskComponent implements OnInit {
       reminder: this.reminder
     }
 
-    this.onAddTask.emit(newTask);
+    this.OnAddTask.emit(newTask);
 
     this.text = '';
     this.day = '';
