@@ -12,10 +12,15 @@ import { TasksItemComponent } from './components/ToDoComponents/tasks-item/tasks
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/ToDoComponents/add-task/add-task.component';
 import { NavBarComponent } from './components/Common/NavBar/nav-bar/nav-bar.component';
+import { BeerAreaComponent } from './components/BeerApi/BeerArea/beer-area/beer-area.component';
+import { CommonModule } from '@angular/common';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+
 
 const appRoutes: Routes = [
   {path: 'todo', component: TasksComponent},
-  {path: 'todo', component: TasksComponent}
+  {path: 'beer', component: BeerAreaComponent},
 ]
 
 @NgModule({
@@ -26,14 +31,19 @@ const appRoutes: Routes = [
     TasksComponent,
     TasksItemComponent,
     AddTaskComponent,
-    NavBarComponent
+    NavBarComponent,
+    BeerAreaComponent
   ],
   imports: [
+
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    CommonModule,
+    RouterModule.forRoot(appRoutes),
+    NoopAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

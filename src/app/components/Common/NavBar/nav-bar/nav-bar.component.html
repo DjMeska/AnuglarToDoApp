@@ -1,0 +1,17 @@
+<div class="bar">
+  <app-button
+  color="{{ buttonColor }}"
+  text="Home"
+  (btnClick)="goToPage('');"
+  ></app-button>
+  <app-button
+  color="{{ buttonColor }}"
+  text="ToDo App"
+  (btnClick)="goToPage('todo');"
+  ></app-button>
+  <app-button
+  color="{{ buttonColor }}"
+  text="Beer"
+  (btnClick)="goToPage('beer');"
+  ></app-button>
+</div>

@@ -1,0 +1,5 @@
+.list {
+  background-color: var(--d);
+  list-style-type: none;
+  padding: 10px;
+}

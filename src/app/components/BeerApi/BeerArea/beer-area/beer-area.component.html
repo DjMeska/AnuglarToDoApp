@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- <mat-select [(value)]="selected">
+    <mat-option value="None">None</mat-option>
+    <mat-option value="option1">Option 1</mat-option>
+  </mat-select> -->
+  <ul class="list">
+    <li *ngFor="let beer of beers"
+    class="item">
+    {{ beer.name }}
+    </li>
+  </ul>
+  {{selected}}
+</div>
