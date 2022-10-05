@@ -3,3 +3,9 @@
   list-style-type: none;
   padding: 10px;
 }
+
+.itemBreak {
+  background-color: var(--e);
+  height: 1px;
+  margin-bottom: 10px;
+}

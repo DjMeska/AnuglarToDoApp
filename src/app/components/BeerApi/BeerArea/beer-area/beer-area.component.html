@@ -1,13 +1,15 @@
 <div class="container">
-  <!-- <mat-select [(value)]="selected">
+  <mat-select [(value)]="selected">
     <mat-option value="None">None</mat-option>
-    <mat-option value="option1">Option 1</mat-option>
-  </mat-select> -->
-  <ul class="list">
+    <mat-option *ngFor="let item of properties" [value]="item">{{ item }}</mat-option>
+  </mat-select>
+  <ul class="list" *ngIf="selected !== 'None'">
     <li *ngFor="let beer of beers"
     class="item">
-    {{ beer.name }}
+      {{ parseBeerSelection(beer) }}
+      <!-- {{ recursiveObjectGeneration(beer, 'a') }} -->
+      <div class="itemBreak"></div>
     </li>
+
   </ul>
-  {{selected}}
 </div>
