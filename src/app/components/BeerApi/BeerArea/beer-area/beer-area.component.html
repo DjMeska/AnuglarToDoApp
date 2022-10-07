@@ -4,10 +4,9 @@
     <mat-option *ngFor="let item of properties" [value]="item">{{ item }}</mat-option>
   </mat-select>
   <ul class="list" *ngIf="selected !== 'None'">
-    <li *ngFor="let beer of beers"
+    <li *ngFor="let obj of propObj | keyvalue"
     class="item">
-      {{ parseBeerSelection(beer) }}
-      <!-- {{ recursiveObjectGeneration(beer, 'a') }} -->
+      {{ obj }}
       <div class="itemBreak"></div>
     </li>
 

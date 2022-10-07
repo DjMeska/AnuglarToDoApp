@@ -26,6 +26,7 @@ export class BeerAreaComponent implements AfterViewInit, OnDestroy {
       .subscribe(response => {
         this.beers = response as Beer[]
         this.properties = Object.getOwnPropertyNames(this.beers[0])
+        this.recursiveObjectGeneration(this.properties, 'a')
       })
   }
 
@@ -41,8 +42,8 @@ export class BeerAreaComponent implements AfterViewInit, OnDestroy {
       const props = Object.getOwnPropertyNames(obj)
       console.log('Props', props)
       console.log('stack', stack)
-      let propObj = this.generateObjectFromProps(props)
-      console.log('propObj', propObj)
+      this.propObj = this.generateObjectFromProps(props)
+      console.log('propObj', this.propObj)
       for (const prop of props) {
         if(typeof obj[prop as keyof Object] === 'object') {
           stack = stack + 'a'
@@ -69,5 +70,6 @@ export class BeerAreaComponent implements AfterViewInit, OnDestroy {
       acc[key] = value;
       return acc;
     }, {});
+    return output;
   }
 }
